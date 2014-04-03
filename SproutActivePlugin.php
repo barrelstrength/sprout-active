@@ -10,7 +10,7 @@ class SproutActivePlugin extends BasePlugin
 
     public function getVersion()
     {
-        return '0.5.0';
+        return '0.5.1';
     }
 
     public function getDeveloper()
@@ -28,11 +28,11 @@ class SproutActivePlugin extends BasePlugin
         return false;
     }
 
-    public function hookAddTwigExtension()
+    public function addTwigExtension()
     {
-        Craft::import('plugins.sproutactiveclass.twigextensions.SproutActiveClassTwigExtension');
+        Craft::import('plugins.sproutactive.twigextensions.SproutActiveTwigExtension');
         
-        return new SproutActiveClassTwigExtension();
+        return new SproutActiveTwigExtension();
     }
 
 }

@@ -4,9 +4,9 @@
 
     <property name="pluginFileName" value="SproutActive" />
     <property name="pluginName" value="sproutactive" />
-    <property name="pluginVersion" value="0.4.0" />
+    <property name="pluginVersion" value="0.5.1" />
 
-    <target name="release" depends="build">
+    <target name="release">
         <echo msg="Preparing release distro..." />
         <zip destfile="${pluginFileName}-${pluginVersion}.zip">
             <fileset dir="../../">
