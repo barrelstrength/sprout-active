@@ -100,12 +100,14 @@ class SproutActiveTwigExtension extends \Twig_Extension
             $localeId = craft()->getLocale()->id;
             $localizedSiteUrl = craft()->config->getLocalized('siteUrl', $localeId);
 
+            $localizedSiteUrl = rtrim($localizedSiteUrl, '/');
+            
             //unless 'omitScriptNameInUrls' is explicitly set to 'true' then page.url will
             //include index.php, we'll have to add it to the localizedSiteUrl
             if(craft()->config->getLocalized('omitScriptNameInUrls', $localeId) === TRUE || strpos($localizedSiteUrl, 'index.php') !== FALSE) {
-                return rtrim($localizedSiteUrl, '/') . '/' . craft()->request->path;
+                return $localizedSiteUrl . '/' . craft()->request->path;
             } else {
-                return rtrim($localizedSiteUrl, '/') . '/index.php/' . craft()->request->path;
+                return $localizedSiteUrl . '/index.php/' . craft()->request->path;
             }
         }
         break;
