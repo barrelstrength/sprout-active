@@ -31,7 +31,7 @@ class SproutActivePlugin extends BasePlugin
     public function addTwigExtension()
     {
         Craft::import('plugins.sproutactive.twigextensions.SproutActiveTwigExtension');
-        
+
         return new SproutActiveTwigExtension();
     }
 
