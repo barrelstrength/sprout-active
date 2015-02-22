@@ -38,9 +38,9 @@ class SproutActiveTwigExtension extends \Twig_Extension
    */
   public function getActive($string = '', $segment = 1, $className = 'active')
   {
-    $segment = $this->_processSegment($segment);
+    $match = craft()->sproutActive->match($string, $segment);
 
-    return ($string == $segment) ? $className : null;
+    return ($match) ? $className : null;
   }
 
   /**
@@ -52,11 +52,12 @@ class SproutActiveTwigExtension extends \Twig_Extension
    * @return mixed OR null
    */
   public function getActiveClass($string = '', $segment = 1, $className = 'active')
-  {
-    $segment = $this->_processSegment($segment);
+  { 
+    $match = craft()->sproutActive->match($string, $segment);
+    
     $activeClassString = 'class="' . $className . '"';
 
-    return ($string == $segment) ? $activeClassString : null;
+    return ($match) ? $activeClassString : null;
   }
 
   /**
@@ -82,43 +83,5 @@ class SproutActiveTwigExtension extends \Twig_Extension
     $segmentClassString = 'class="' . $segment . '"';
 
     return $segmentClassString;
-  }
-
-  /**
-   * Determine how to process the segment requested
-   *
-   * @param  mixed $segment Segment number or keyword
-   * @return string         Segment, Path, or Full URL
-   */
-  private function _processSegment($segment)
-  {
-    switch ($segment) {
-      case 'url':
-        if(defined('CRAFT_SITE_URL')) {
-            return CRAFT_SITE_URL . craft()->request->url;
-        } else {
-            $localeId = craft()->getLocale()->id;
-            $localizedSiteUrl = craft()->config->getLocalized('siteUrl', $localeId);
-
-            $localizedSiteUrl = rtrim($localizedSiteUrl, '/');
-            
-            //unless 'omitScriptNameInUrls' is explicitly set to 'true' then page.url will
-            //include index.php, we'll have to add it to the localizedSiteUrl
-            if(craft()->config->getLocalized('omitScriptNameInUrls', $localeId) === TRUE || strpos($localizedSiteUrl, 'index.php') !== FALSE) {
-                return $localizedSiteUrl . '/' . craft()->request->path;
-            } else {
-                return $localizedSiteUrl . '/index.php/' . craft()->request->path;
-            }
-        }
-        break;
-
-      case 'path':
-        return craft()->request->path;
-        break;
-
-      default:
-        return craft()->request->getSegment($segment);
-        break;
-    }
   }
 }
