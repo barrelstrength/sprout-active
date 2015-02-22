@@ -4,7 +4,7 @@
 
     <property name="pluginFileName" value="SproutActive" />
     <property name="pluginName" value="sproutactive" />
-    <property name="pluginVersion" value="0.5.1" />
+    <property name="pluginVersion" value="0.7.0" />
 
     <target name="release">
         <echo msg="Preparing release distro..." />
@@ -14,6 +14,7 @@
                 <exclude name="${pluginName}/build/" />
                 <exclude name="${pluginName}/resources/css/" />
                 <exclude name="${pluginName}/resources/js/" />
+                <exclude name="${pluginName}/tests/" />
                 <exclude name="${pluginName}/README.md" />
                 <exclude name="${pluginName}/.git/" />
                 <exclude name="${pluginName}/.gitignore" />
