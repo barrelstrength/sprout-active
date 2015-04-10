@@ -14,13 +14,6 @@ Sprout Active Updates
 http://sprout.barrelstrengthdesign.com/craft-plugins/active/updates
 
 
-Sprout Active Translations
-------------------------------------------------------------
-A default translation file is provided on GitHub and can be modified 
-as needed for your language requirements.
-https://github.com/BarrelStrength/Craft-SproutActive/blob/master/translations/en_us.php
-
-
 Sprout Active Active
 ------------------------------------------------------------
 
