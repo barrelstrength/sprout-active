@@ -8,6 +8,11 @@ class SproutActivePlugin extends BasePlugin
 		return Craft::t('Sprout Active');
 	}
 
+	public function getDescription()
+	{
+		return "Simplify navigation and URL-based logic in your templates.";
+	}
+
 	public function getVersion()
 	{
 		return '0.7.0';
@@ -21,6 +26,16 @@ class SproutActivePlugin extends BasePlugin
 	public function getDeveloperUrl()
 	{
 		return 'http://barrelstrengthdesign.com';
+	}
+
+	public function getDocumentationUrl()
+	{
+		return "http://sprout.barrelstrengthdesign.com/craft-plugins/active/docs";
+	}
+
+	public function getReleaseFeedUrl()
+	{
+		return 'http://sprout.barrelstrengthdesign.com/craft-plugins/active/releases.json';
 	}
 
 	public function hasCpSection()
