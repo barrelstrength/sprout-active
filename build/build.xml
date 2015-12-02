@@ -4,7 +4,7 @@
 
     <property name="pluginFileName" value="SproutActive" />
     <property name="pluginName" value="sproutactive" />
-    <property name="pluginVersion" value="0.7.0" />
+    <property name="pluginVersion" value="1.0.0" />
 
     <target name="release">
         <echo msg="Preparing release distro..." />
