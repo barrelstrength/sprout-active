@@ -3,9 +3,16 @@ namespace barrelstrength\sproutactive\services;
 
 use Craft;
 use craft\base\Component;
+use craft\helpers\UrlHelper;
 
 class Utilities extends Component
 {
+	/**
+	 * @param $string
+	 * @param $segment
+	 *
+	 * @return bool
+	 */
 	public function match($string, $segment)
 	{
 		// Get the slug version of the segment
@@ -29,11 +36,11 @@ class Utilities extends Component
 		switch ($segment)
 		{
 			case 'url':
-				return $this->_getUrl($segment);
+				return $this->_getUrl();
 				break;
 
 			case 'path':
-				return Craft::$app->request->path;
+				return Craft::$app->getRequest()->getFullPath();
 				break;
 
 			default:
@@ -44,9 +51,11 @@ class Utilities extends Component
 
 	private function _getUrl()
 	{
-		if (defined('CRAFT_SITE_URL'))
+		$siteUrl = Craft::$app->getConfig()->get('siteUrl');
+
+		if ($siteUrl != null)
 		{
-			return CRAFT_SITE_URL . Craft::$app->request->url;
+			return $siteUrl . Craft::$app->request->url;
 		}
 		else
 		{
@@ -56,7 +65,7 @@ class Utilities extends Component
 
 			if (!$localizedSiteUrl)
 			{
-				$localizedSiteUrl = Craft::$app->getSiteUrl();
+				$localizedSiteUrl = UrlHelper::siteUrl();
 			}
 
 			$localizedSiteUrl = rtrim($localizedSiteUrl, '/');
@@ -68,11 +77,11 @@ class Utilities extends Component
 
 			if($omitScriptNameInUrls || $noIndexInUrls)
 			{
-				return $localizedSiteUrl . '/' . Craft::$app->request->path;
+				return $localizedSiteUrl . '/' . Craft::$app->getRequest()->getFullPath();
 			}
 			else
 			{
-				return $localizedSiteUrl . '/index.php/' . Craft::$app->request->path;
+				return $localizedSiteUrl . '/index.php/' . Craft::$app->getRequest()->getFullPath();
 			}
 		}
 	}

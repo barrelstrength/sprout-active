@@ -3,7 +3,6 @@ namespace barrelstrength\sproutactive\twig;
 
 use Craft;
 use \Twig_Extension;
-use \Twig_SimpleFunction;
 
 use barrelstrength\sproutactive\SproutActive;
 

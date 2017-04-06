@@ -3,7 +3,6 @@ namespace barrelstrength\sproutactive;
 
 use Craft;
 use craft\base\Plugin;
-
 use barrelstrength\sproutactive\twig\TwigExtensions;
 
 class SproutActive extends Plugin

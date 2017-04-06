@@ -1,7 +1,6 @@
 <?php
 namespace barrelstrength\sproutactive\services;
 
-use Craft;
 use craft\base\Component;
 
 class Api extends Component
