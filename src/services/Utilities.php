@@ -1,15 +1,11 @@
 <?php
-namespace Craft;
+namespace barrelstrength\sproutactive\services;
 
-class SproutActiveService extends BaseApplicationComponent
+use Craft;
+use craft\base\Component;
+
+class Utilities extends Component
 {
-	/**
-	 * Check if our URL segment matches an array of test values
-	 * 
-	 * @param  string  $string  Pipe-delimited list of test values
-	 * @param  integer $segment Number representation of the URL segment 
-	 * @return boolean          true/false
-	 */
 	public function match($string, $segment)
 	{
 		// Get the slug version of the segment
@@ -24,12 +20,12 @@ class SproutActiveService extends BaseApplicationComponent
 
 	/**
 	 * Determine how to process the segment requested
-	 * 
+	 *
 	 * @param  mixed $segment Segment number or keyword
 	 * @return string         Segment, Path, or Full URL
 	 */
 	public function processSegment($segment)
-	{ 
+	{
 		switch ($segment)
 		{
 			case 'url':
@@ -37,47 +33,48 @@ class SproutActiveService extends BaseApplicationComponent
 				break;
 
 			case 'path':
-				return craft()->request->path;
+				return Craft::$app->request->path;
 				break;
-			
+
 			default:
-				return craft()->request->getSegment($segment);
+				return Craft::$app->request->getSegment($segment);
 				break;
 		}
 	}
 
 	private function _getUrl()
-	{	
-		if (defined('CRAFT_SITE_URL')) 
-		{	
-			return CRAFT_SITE_URL . craft()->request->url;
+	{
+		if (defined('CRAFT_SITE_URL'))
+		{
+			return CRAFT_SITE_URL . Craft::$app->request->url;
 		}
 		else
-		{	
-			$localeId = craft()->getLocale()->id;
+		{
+			$localeId = Craft::$app->getLocale()->id;
 
-			$localizedSiteUrl = craft()->config->getLocalized('siteUrl', $localeId);
+			$localizedSiteUrl = Craft::$app->config->getLocalized('siteUrl', $localeId);
 
-			if (!$localizedSiteUrl) 
+			if (!$localizedSiteUrl)
 			{
-				$localizedSiteUrl = craft()->getSiteUrl();
+				$localizedSiteUrl = Craft::$app->getSiteUrl();
 			}
 
 			$localizedSiteUrl = rtrim($localizedSiteUrl, '/');
 
 			// Unless 'omitScriptNameInUrls' is explicitly set to 'true' then page.url will
 			// include index.php, we'll have to add it to the localizedSiteUrl
-			$omitScriptNameInUrls = craft()->config->getLocalized('omitScriptNameInUrls', $localeId) === TRUE;
+			$omitScriptNameInUrls = Craft::$app->config->getLocalized('omitScriptNameInUrls', $localeId) === TRUE;
 			$noIndexInUrls = strpos($localizedSiteUrl, 'index.php') !== TRUE;
 
-			if($omitScriptNameInUrls || $noIndexInUrls) 
-			{	
-				return $localizedSiteUrl . '/' . craft()->request->path;
+			if($omitScriptNameInUrls || $noIndexInUrls)
+			{
+				return $localizedSiteUrl . '/' . Craft::$app->request->path;
 			}
 			else
-			{	
-				return $localizedSiteUrl . '/index.php/' . craft()->request->path;
+			{
+				return $localizedSiteUrl . '/index.php/' . Craft::$app->request->path;
 			}
 		}
 	}
 }
+

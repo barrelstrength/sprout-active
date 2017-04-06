@@ -1,0 +1,26 @@
+{
+  "name": "barrelstrength/sproutactive",
+  "description": "Simplify navigation and URL-based logic in your templates.",
+  "version": "2.0.0",
+  "type": "craft-plugin",
+  "autoload": {
+    "psr-4": {
+      "barrelstrength\\sproutactive\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Sprout Active",
+    "handle": "sproutActive",
+    "version": "2.0.0",
+    "schemaVersion": "2.0.0",
+    "developer": "Barrel Strength",
+    "developerUrl": "https://barrelstrengthdesign.com",
+    "documentationUrl": "https://sprout.barrelstrengthdesign.com/craft-plugins/active",
+    "changelogUrl": "https://raw.githubusercontent.com/BarrelStrength/sproutactive/master/CHANGELOG.md",
+    "downloadUrl": "https://github.com/BarrelStrength/sproutactive/archive/master.zip",
+    "class": "barrelstrength\\sproutactive\\SproutActive",
+    "components": {
+      "api": "barrelstrength\\sproutactive\\services\\Api"
+    }
+  }
+}
