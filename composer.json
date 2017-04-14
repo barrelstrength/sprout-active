@@ -20,7 +20,7 @@
     "downloadUrl": "https://github.com/BarrelStrength/sproutactive/archive/master.zip",
     "class": "barrelstrength\\sproutactive\\SproutActive",
     "components": {
-      "api": "barrelstrength\\sproutactive\\services\\Api"
+      "api": "barrelstrength\\sproutactive\\services\\Api",
     }
   }
 }
