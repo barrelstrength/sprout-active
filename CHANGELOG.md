@@ -1,14 +1,19 @@
 Changelog
 =========
 
+## 2.0.2 - 2018-01-26
+
+### Changed
+- Updated changelog to include plugin release history
+
 ## 2.0.1 - 2017-11-22
 
 ### Added
 - Added plugin icon
 
-### Improved
+### Changed
 - Updated composer require syntax to `barrelstrength/sprout-active`
-- Updated SproutActive::$api => SproutActive::$app
+- Updated `SproutActive::$api` => `SproutActive::$app`
 - Improved comments and code syntax
 
 ## 2.0.0 - 2017-02-01
@@ -27,7 +32,7 @@ Changelog
 
 ## 0.7.0 - 2015-02-26
 
-### Improved
+### Changed
 - Improved support for CRAFT_SITE_URL
 - Improved support for locales
 - Improved support for index.php in URLs
@@ -45,7 +50,7 @@ Changelog
  
  ## 0.5.0 - 2014-03-14
  
-### Improved
+### Changed
 - Renamed Sprout Active Class => Sprout Active
 
 ## 0.4.0 - 2014-02-09
