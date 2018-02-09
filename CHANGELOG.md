@@ -1,6 +1,11 @@
 Changelog
 =========
 
+## 2.0.3 - 2018-02-08
+
+### Changed
+- Updated plugin icon
+
 ## 2.0.2 - 2018-01-26
 
 ### Changed
