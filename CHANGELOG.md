@@ -1,6 +1,11 @@
 Changelog
 =========
 
+## 2.0.4 - 2018-02-20
+
+### Fixed
+- Fixed full url option
+
 ## 2.0.3 - 2018-02-08
 
 ### Changed
