@@ -61,25 +61,18 @@ class Utilities extends Component
         if (defined('CRAFT_SITE_URL')) {
             return CRAFT_SITE_URL.Craft::$app->request->url;
         } else {
-            $localeId = Craft::$app->getLocale()->id;
-
-            $localizedSiteUrl = Craft::$app->config->getLocalized('siteUrl', $localeId);
-
-            if (!$localizedSiteUrl) {
-                $localizedSiteUrl = Craft::$app->getSiteUrl();
-            }
-
+            $localizedSiteUrl = Craft::$app->getSites()->currentSite->baseUrl;
             $localizedSiteUrl = rtrim($localizedSiteUrl, '/');
 
             // Unless 'omitScriptNameInUrls' is explicitly set to 'true' then page.url will
             // include index.php, we'll have to add it to the localizedSiteUrl
-            $omitScriptNameInUrls = Craft::$app->config->getLocalized('omitScriptNameInUrls', $localeId) === true;
+            $omitScriptNameInUrls = Craft::$app->config->getGeneral()->omitScriptNameInUrls === true;
             $noIndexInUrls = strpos($localizedSiteUrl, 'index.php') !== true;
 
             if ($omitScriptNameInUrls || $noIndexInUrls) {
-                return $localizedSiteUrl.'/'.Craft::$app->request->path;
+                return $localizedSiteUrl.'/'.Craft::$app->request->getFullPath();
             } else {
-                return $localizedSiteUrl.'/index.php/'.Craft::$app->request->path;
+                return $localizedSiteUrl.'/index.php/'.Craft::$app->request->getFullPath();
             }
         }
     }
