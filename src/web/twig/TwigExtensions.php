@@ -1,6 +1,6 @@
 <?php
 
-namespace barrelstrength\sproutactive\twig;
+namespace barrelstrength\sproutactive\web\twig;
 
 use Craft;
 use \Twig_Extension;
