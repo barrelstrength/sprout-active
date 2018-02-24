@@ -11,14 +11,14 @@ Sprout Active makes it simple to control the active classname in your navigation
 
 Sprout Active provides two Twig Filters, `active()` and `activeClass()`, to test for matching URL segments and output a class to make an element active.
 
-By default, the activeClass() filter tests for the first URL segment against your matching copy, and outputs the string: class="active"
+By default, the activeClass() filter tests for the first URL segment against your matching copy, and outputs the string: `class="active"`
 
 For example, the most simple version of these filters will match the first segment in the URL http://example.com/about-us. If no match is found, they will return blank.
 
 ``` twig
-{{ active('about-us') }}
+{{ active('about-us') }} {# Output if match: active #}
 
-{{ activeClass('about-us') }}
+{{ activeClass('about-us') }} {# Output if match: class="active" #}
 
 {{ activeClass(entry.slug) }}
 ```
