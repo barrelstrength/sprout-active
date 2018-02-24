@@ -1,6 +1,12 @@
 Changelog
 =========
 
+## 2.0.5 - 2018-02-24
+
+### Changed
+- Updated examples in README
+- Updated file location conventions
+
 ## 2.0.4 - 2018-02-20
 
 ### Fixed
