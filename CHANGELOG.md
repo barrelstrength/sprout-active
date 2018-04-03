@@ -1,6 +1,11 @@
 Changelog
 =========
 
+## 2.0.6 - 2018-04-03
+
+## Changed
+- Fixed potential conflicts with svg icon styles
+
 ## 2.0.5 - 2018-02-24
 
 ### Changed
