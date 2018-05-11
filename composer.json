@@ -34,16 +34,12 @@
   "extra": {
     "name": "Sprout Active",
     "handle": "sprout-active",
-    "schemaVersion": "2.0.0",
     "developer": "Barrel Strength",
     "developerUrl": "https://barrelstrengthdesign.com",
     "documentationUrl": "https://sprout.barrelstrengthdesign.com/craft-plugins/active",
     "changelogUrl": "https://raw.githubusercontent.com/barrelstrength/sprout-active/master/CHANGELOG.md",
     "downloadUrl": "https://github.com/barrelstrength/sprout-active/archive/master.zip",
-    "class": "barrelstrength\\sproutactive\\SproutActive",
-    "components": {
-      "app": "barrelstrength\\sproutactive\\services\\App"
-    }
+    "class": "barrelstrength\\sproutactive\\SproutActive"
   }
 }
 
