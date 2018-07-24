@@ -22,6 +22,6 @@ class SproutActive extends Plugin
 
         self::$app = $this->get('app');
 
-        Craft::$app->view->twig->addExtension(new TwigExtensions());
+        Craft::$app->view->registerTwigExtension(new TwigExtensions());
     }
 }
