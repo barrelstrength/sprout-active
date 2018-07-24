@@ -1,7 +1,7 @@
 {
   "name": "barrelstrength/sprout-active",
   "description": "Simplify navigation and URL-based logic in your templates.",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "type": "craft-plugin",
   "keywords": [
     "craftcms",
@@ -24,7 +24,7 @@
     "rss": "https://github.com/barrelstrength/sprout-active/commits/v2.atom"
   },
   "require": {
-    "craftcms/cms": "^3.0.0-beta"
+    "craftcms/cms": "^3.0.0"
   },
   "autoload": {
     "psr-4": {

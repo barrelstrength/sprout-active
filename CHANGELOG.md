@@ -1,6 +1,15 @@
 Changelog
 =========
 
+## 2.0.7 - 2019-07-24
+
+## Changed
+- Moved schema and component definitions to Plugin class
+
+## Fixed
+- Fixed icon display issue
+- Updated to use registerTwigExtension
+
 ## 2.0.6 - 2018-04-03
 
 ## Changed
