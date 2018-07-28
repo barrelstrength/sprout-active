@@ -1,0 +1,75 @@
+[
+  {
+    "version": "1.1.0",
+    "downloadUrl": "https://github.com/barrelstrength/craft-sprout-active/archive/v1.0.0.zip",
+    "date": "2018-07-28T08:00:00+00:00",
+    "notes": [
+      "[Improved] Moved release feed to Github",
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "downloadUrl": "https://github.com/barrelstrength/craft-sprout-active/archive/v1.0.0.zip",
+    "date": "2015-12-02T08:00:00+00:00",
+    "notes": [
+      "[Added] Added Plugin icon",
+      "[Added] Added Plugin description",
+      "[Added] Added link to documentation",
+      "[Added] Added link to plugin settings",
+      "[Added] Added link to release feed"
+    ]
+  },
+  {
+    "version": "0.7.0",
+    "downloadUrl": "https://github.com/barrelstrength/craft-sprout-active/releases",
+    "date": "2015-02-26T15:30:00+00:00",
+    "notes": [
+      "[Improved] Improved support for CRAFT_SITE_URL",
+      "[Improved] Improved support for locales",
+      "[Improved] Improved support for index.php in URLs",
+      "[Improved] Updated deprecated `hookAddTwigExtension` to `addTwigExtension`"
+    ]
+  },
+  {
+    "version": "0.6.0",
+    "downloadUrl": "https://github.com/barrelstrength/craft-sprout-active/releases",
+    "date": "2014-05-22T07:22:00+00:00",
+    "notes": [
+      "[Added] Added support to test for multiple values using the pipe delimiter"
+    ]
+  },
+  {
+    "version": "0.5.1",
+    "downloadUrl": "https://github.com/barrelstrength/craft-sprout-active/releases",
+    "date": "2014-03-14T18:45:00+00:00",
+    "notes": [
+      "[Fixed] Fixed Twig extension naming"
+    ]
+  },
+  {
+    "version": "0.5.0",
+    "downloadUrl": "https://github.com/barrelstrength/craft-sprout-active/releases",
+    "date": "2014-03-14T17:44:00+00:00",
+    "notes": [
+      "[Improved] Renamed Sprout Active Class =&gt; Sprout Active"
+    ]
+  },
+  {
+    "version": "0.4.0",
+    "downloadUrl": "https://github.com/barrelstrength/craft-sprout-active/releases",
+    "date": "2014-02-15T14:21:00+00:00",
+    "notes": [
+      "[Added] Added ability to test for a complete URL",
+      "[Added] Added ability to test for a path",
+      "[Added] Added segment function to output a segment by name"
+    ]
+  },
+  {
+    "version": "0.3.0",
+    "downloadUrl": "https://github.com/barrelstrength/craft-sprout-active/releases",
+    "date": "2014-01-25T05:57:00+00:00",
+    "notes": [
+      "[Added] Public Beta"
+    ]
+  }
+]

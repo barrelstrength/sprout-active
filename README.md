@@ -11,7 +11,7 @@ http://sprout.barrelstrengthdesign.com/craft-plugins/active
 
 Sprout Active Updates
 ------------------------------------------------------------
-http://sprout.barrelstrengthdesign.com/craft-plugins/active/updates
+https://sprout.barrelstrengthdesign.com/docs/support/changelog.html
 
 
 Sprout Active Active
@@ -22,9 +22,3 @@ https://craftcms.stackexchange.com/
 
 Via Email:
 Send us a note at: sprout@barrelstrengthdesign.com
-
-
-Sprout Active License Terms
-------------------------------------------------------------
-Use of Sprout Active is subject to the license agreement available here:
-http://sprout.barrelstrengthdesign.com/license
