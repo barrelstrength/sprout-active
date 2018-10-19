@@ -62,6 +62,11 @@ class Utilities extends Component
             return CRAFT_SITE_URL.Craft::$app->request->url;
         } else {
             $localizedSiteUrl = Craft::$app->getSites()->currentSite->baseUrl;
+
+            if (rtrim($localizedSiteUrl, '/') === "@web") {
+                $localizedSiteUrl = Craft::$app->request->getHostInfo() . Craft::$app->request->getBaseUrl();
+            }
+
             $localizedSiteUrl = rtrim($localizedSiteUrl, '/');
 
             // Unless 'omitScriptNameInUrls' is explicitly set to 'true' then page.url will
