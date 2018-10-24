@@ -42,7 +42,7 @@ class Utilities extends Component
                 break;
 
             case 'path':
-                return Craft::$app->request->path;
+                return Craft::$app->request->getFullPath();
                 break;
 
             default:
