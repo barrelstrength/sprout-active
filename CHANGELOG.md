@@ -1,6 +1,11 @@
 Changelog
 =========
 
+## 2.0.8 - 2018-10-24
+
+### Fixed
+- Fixed issue where attempting to match the 'path' would result in an error
+
 ## 2.0.7 - 2019-07-24
 
 ## Changed
