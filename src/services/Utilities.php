@@ -20,6 +20,9 @@ class Utilities extends Component
         // Get the slug version of the segment
         $matchString = $this->processSegment($segment);
 
+        //Adds support for alias based string
+        $string = Craft::getAlias($string);
+        
         // Convert our input into an array
         $matchOptions = explode('|', $string);
 
