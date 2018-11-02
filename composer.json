@@ -1,7 +1,7 @@
 {
   "name": "barrelstrength/sprout-active",
   "description": "Simplify navigation and URL-based logic in your templates.",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "type": "craft-plugin",
   "keywords": [
     "craftcms",

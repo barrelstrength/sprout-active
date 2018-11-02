@@ -1,6 +1,13 @@
 Changelog
 =========
 
+## 2.0.9 - 2018-11-02
+
+### Fixed
+- Fixed bug where aliasses were not supported when using Absolute URL setting ([#4])
+
+[#4]: https://github.com/barrelstrength/craft-sprout-active/issues/4
+
 ## 2.0.8 - 2018-10-24
 
 ### Fixed
