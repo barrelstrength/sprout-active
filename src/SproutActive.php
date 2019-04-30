@@ -6,6 +6,7 @@ use Craft;
 use craft\base\Plugin;
 use barrelstrength\sproutactive\services\App;
 use barrelstrength\sproutactive\web\twig\TwigExtensions;
+use yii\base\InvalidConfigException;
 
 class SproutActive extends Plugin
 {
@@ -22,7 +23,7 @@ class SproutActive extends Plugin
     public $schemaVersion = '2.0.0';
 
     /**
-     * @throws \yii\base\InvalidConfigException
+     * @throws InvalidConfigException
      */
     public function init()
     {

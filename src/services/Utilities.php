@@ -5,6 +5,9 @@ namespace barrelstrength\sproutactive\services;
 use Craft;
 use craft\base\Component;
 
+/**
+ * @property string $url
+ */
 class Utilities extends Component
 {
     /**
@@ -15,7 +18,7 @@ class Utilities extends Component
      *
      * @return bool
      */
-    public function match($string, $segment)
+    public function match($string, $segment): bool
     {
         // Get the slug version of the segment
         $matchString = $this->processSegment($segment);
@@ -27,7 +30,7 @@ class Utilities extends Component
         $matchOptions = explode('|', $string);
 
         // Return true if the segment matches any of our test values
-        return in_array($matchString, $matchOptions);
+        return in_array($matchString, $matchOptions, true);
     }
 
     /**
@@ -41,7 +44,7 @@ class Utilities extends Component
     {
         switch ($segment) {
             case 'url':
-                return $this->_getUrl($segment);
+                return $this->getUrl();
                 break;
 
             case 'path':
@@ -59,25 +62,25 @@ class Utilities extends Component
      *
      * @return string
      */
-    private function _getUrl()
+    private function getUrl(): string
     {
         if (defined('CRAFT_SITE_URL')) {
             return CRAFT_SITE_URL.Craft::$app->request->url;
-        } else {
-            $localizedSiteUrl = Craft::$app->getSites()->currentSite->baseUrl;
-            $localizedSiteUrl = rtrim($localizedSiteUrl, '/');
-
-            // Unless 'omitScriptNameInUrls' is explicitly set to 'true' then page.url will
-            // include index.php, we'll have to add it to the localizedSiteUrl
-            $omitScriptNameInUrls = Craft::$app->config->getGeneral()->omitScriptNameInUrls === true;
-            $noIndexInUrls = strpos($localizedSiteUrl, 'index.php') !== true;
-
-            if ($omitScriptNameInUrls || $noIndexInUrls) {
-                return $localizedSiteUrl.'/'.Craft::$app->request->getFullPath();
-            } else {
-                return $localizedSiteUrl.'/index.php/'.Craft::$app->request->getFullPath();
-            }
         }
+
+        $localizedSiteUrl = Craft::$app->getSites()->currentSite->baseUrl;
+        $localizedSiteUrl = rtrim($localizedSiteUrl, '/');
+
+        // Unless 'omitScriptNameInUrls' is explicitly set to 'true' then page.url will
+        // include index.php, we'll have to add it to the localizedSiteUrl
+        $omitScriptNameInUrls = Craft::$app->config->getGeneral()->omitScriptNameInUrls === true;
+        $noIndexInUrls = strpos($localizedSiteUrl, 'index.php') !== true;
+
+        if ($omitScriptNameInUrls || $noIndexInUrls) {
+            return $localizedSiteUrl.'/'.Craft::$app->request->getFullPath();
+        }
+
+        return $localizedSiteUrl.'/index.php/'.Craft::$app->request->getFullPath();
     }
 }
 

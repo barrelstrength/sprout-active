@@ -5,13 +5,14 @@ namespace barrelstrength\sproutactive\web\twig;
 use Craft;
 use \Twig_Extension;
 use barrelstrength\sproutactive\SproutActive;
+use Twig_SimpleFunction;
 
 class TwigExtensions extends Twig_Extension
 {
     /**
      * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return 'Sprout Active';
     }
@@ -21,13 +22,13 @@ class TwigExtensions extends Twig_Extension
      *
      * @return array
      */
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
-            new \Twig_SimpleFunction('active', [$this, 'getActive']),
-            new \Twig_SimpleFunction('activeClass', [$this, 'getActiveClass'], ['is_safe' => ['html']]),
-            new \Twig_SimpleFunction('segment', [$this, 'getSegment']),
-            new \Twig_SimpleFunction('segmentClass', [$this, 'getSegmentClass'], ['is_safe' => ['html']])
+            new Twig_SimpleFunction('active', [$this, 'getActive']),
+            new Twig_SimpleFunction('activeClass', [$this, 'getActiveClass'], ['is_safe' => ['html']]),
+            new Twig_SimpleFunction('segment', [$this, 'getSegment']),
+            new Twig_SimpleFunction('segmentClass', [$this, 'getSegmentClass'], ['is_safe' => ['html']])
         ];
     }
 
@@ -38,7 +39,7 @@ class TwigExtensions extends Twig_Extension
      * @param integer $segment   URL segment to test against
      * @param string  $className Value of CSS class to return to template
      *
-     * @return string OR null
+     * @return string|null
      */
     public function getActive($string = '', $segment = 1, $className = 'active')
     {
@@ -62,7 +63,7 @@ class TwigExtensions extends Twig_Extension
 
         $activeClassString = 'class="'.$className.'"';
 
-        return ($match) ? $activeClassString : null;
+        return $match ? $activeClassString : null;
     }
 
     /**
@@ -70,7 +71,7 @@ class TwigExtensions extends Twig_Extension
      *
      * @param integer $segment URL segment to test for
      *
-     * @return string OR null   Value of URL segment if it exists
+     * @return string|null   Value of URL segment if it exists
      */
     public function getSegment($segment = null)
     {
@@ -88,7 +89,6 @@ class TwigExtensions extends Twig_Extension
     {
         $segment = Craft::$app->request->getSegment($segment);
 
-        return 'class="'.$segment.'"';;
+        return 'class="'.$segment.'"';
     }
-
 }
