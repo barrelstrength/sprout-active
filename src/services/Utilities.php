@@ -22,7 +22,7 @@ class Utilities extends Component
 
         //Adds support for alias based string
         $string = Craft::getAlias($string);
-        
+
         // Convert our input into an array
         $matchOptions = explode('|', $string);
 
@@ -33,7 +33,7 @@ class Utilities extends Component
     /**
      * Determine how to process the segment requested
      *
-     * @param  mixed $segment Segment number or keyword
+     * @param mixed $segment Segment number or keyword
      *
      * @return string         Segment, Path, or Full URL
      */

@@ -34,9 +34,9 @@ class TwigExtensions extends Twig_Extension
     /**
      * Output the classname if conditions match
      *
-     * @param  string  $string    Value from URL to use in test
-     * @param  integer $segment   URL segment to test against
-     * @param  string  $className Value of CSS class to return to template
+     * @param string  $string    Value from URL to use in test
+     * @param integer $segment   URL segment to test against
+     * @param string  $className Value of CSS class to return to template
      *
      * @return string OR null
      */
@@ -50,9 +50,9 @@ class TwigExtensions extends Twig_Extension
     /**
      * Output the classname and class parameter if conditionals match
      *
-     * @param  string  $string    Value from URL to use in test
-     * @param  integer $segment   URL segment to test against
-     * @param  mixed   $className Value of CSS class to return to template
+     * @param string  $string    Value from URL to use in test
+     * @param integer $segment   URL segment to test against
+     * @param mixed   $className Value of CSS class to return to template
      *
      * @return mixed OR null
      */
@@ -68,7 +68,7 @@ class TwigExtensions extends Twig_Extension
     /**
      * Output the segment if conditions match
      *
-     * @param  integer $segment URL segment to test for
+     * @param integer $segment URL segment to test for
      *
      * @return string OR null   Value of URL segment if it exists
      */
@@ -80,7 +80,7 @@ class TwigExtensions extends Twig_Extension
     /**
      * Output the segment and class parameter if conditions match
      *
-     * @param  integer $segment URL segment to test for
+     * @param integer $segment URL segment to test for
      *
      * @return mixed OR null    Value of URL segment wrapped in class parameter if it exists
      */
@@ -88,7 +88,7 @@ class TwigExtensions extends Twig_Extension
     {
         $segment = Craft::$app->request->getSegment($segment);
 
-        return 'class="' . $segment . '"';;
+        return 'class="'.$segment.'"';;
     }
 
 }
