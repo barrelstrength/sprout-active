@@ -20,7 +20,7 @@
     "email": "support@barrelstrengthdesign.com",
     "issues": "https://github.com/barrelstrength/sprout-active/issues?state=open",
     "source": "https://github.com/barrelstrength/sprout-active",
-    "docs": "https://sprout.barrelstrengthdesign.com/craft-plugins/active/docs",
+    "docs": "https://sprout.barrelstrengthdesign.com/docs/active",
     "rss": "https://github.com/barrelstrength/sprout-active/commits/v2.atom"
   },
   "require": {
@@ -35,10 +35,7 @@
     "name": "Sprout Active",
     "handle": "sprout-active",
     "developer": "Barrel Strength",
-    "developerUrl": "https://barrelstrengthdesign.com",
-    "documentationUrl": "https://sprout.barrelstrengthdesign.com/craft-plugins/active",
-    "changelogUrl": "https://raw.githubusercontent.com/barrelstrength/sprout-active/master/CHANGELOG.md",
-    "downloadUrl": "https://github.com/barrelstrength/sprout-active/archive/master.zip",
+    "documentationUrl": "https://sprout.barrelstrengthdesign.com/docs/active",
     "class": "barrelstrength\\sproutactive\\SproutActive"
   }
 }
