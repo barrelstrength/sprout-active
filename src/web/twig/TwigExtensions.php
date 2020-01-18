@@ -3,11 +3,11 @@
 namespace barrelstrength\sproutactive\web\twig;
 
 use Craft;
-use \Twig_Extension;
+use Twig\Extension\AbstractExtension;
 use barrelstrength\sproutactive\SproutActive;
-use Twig_SimpleFunction;
+use Twig\TwigFunction;
 
-class TwigExtensions extends Twig_Extension
+class TwigExtensions extends AbstractExtension
 {
     /**
      * @return string
@@ -25,10 +25,10 @@ class TwigExtensions extends Twig_Extension
     public function getFunctions(): array
     {
         return [
-            new Twig_SimpleFunction('active', [$this, 'getActive']),
-            new Twig_SimpleFunction('activeClass', [$this, 'getActiveClass'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('segment', [$this, 'getSegment']),
-            new Twig_SimpleFunction('segmentClass', [$this, 'getSegmentClass'], ['is_safe' => ['html']])
+            new TwigFunction('active', [$this, 'getActive']),
+            new TwigFunction('activeClass', [$this, 'getActiveClass'], ['is_safe' => ['html']]),
+            new TwigFunction('segment', [$this, 'getSegment']),
+            new TwigFunction('segmentClass', [$this, 'getSegmentClass'], ['is_safe' => ['html']])
         ];
     }
 
