@@ -7,10 +7,10 @@
 
 namespace barrelstrength\sproutactive;
 
-use Craft;
-use craft\base\Plugin;
 use barrelstrength\sproutactive\services\App;
 use barrelstrength\sproutactive\web\twig\TwigExtensions;
+use Craft;
+use craft\base\Plugin;
 use yii\base\InvalidConfigException;
 
 class SproutActive extends Plugin

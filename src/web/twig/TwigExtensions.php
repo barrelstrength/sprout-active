@@ -7,9 +7,9 @@
 
 namespace barrelstrength\sproutactive\web\twig;
 
+use barrelstrength\sproutactive\SproutActive;
 use Craft;
 use Twig\Extension\AbstractExtension;
-use barrelstrength\sproutactive\SproutActive;
 use Twig\TwigFunction;
 
 class TwigExtensions extends AbstractExtension
