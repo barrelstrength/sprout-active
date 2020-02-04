@@ -1,15 +1,22 @@
-Changelog
-=========
+# Changelog
+
+## 2.2.0 - 2020-02-01
+
+## Added
+- Added Github community files
+
+## Changed
+- Updated deprecated Twig classes
 
 ## 2.1.0 - 2019-04-29
 
-## Changed
+### Changed
 - Updated icon
 
 ## 2.0.9 - 2018-11-02
 
 ### Fixed
-- Fixed bug where aliasses were not supported when using Absolute URL setting ([#4])
+- Fixed bug where aliases were not supported when using Absolute URL setting ([#4])
 
 [#4]: https://github.com/barrelstrength/craft-sprout-active/issues/4
 
@@ -29,7 +36,7 @@ Changelog
 
 ## 2.0.6 - 2018-04-03
 
-## Changed
+### Changed
 - Fixed potential conflicts with svg icon styles
 
 ## 2.0.5 - 2018-02-24
