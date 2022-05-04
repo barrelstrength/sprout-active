@@ -1,10 +1,17 @@
 Sprout Active
 ===================
 
+## Status
+
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+In an effort to reduce the number of packages we publicly maintain, Sprout Active will not be migrated to Craft 4. If you'd like to take the helm or take responsibility over maintaining the repository please reach out: [sprout@barrelstrengthdesign.com](mailto:sprout@barrelstrengthdesign.com).
+
+## Overview 
+
 Simplify navigation and URL-based logic in your templates.
 
 Sprout Active makes it simple to control the active classname in your navigation or conditional content based on your URL segments or your full URL.
-
 
 ## Usage
 
